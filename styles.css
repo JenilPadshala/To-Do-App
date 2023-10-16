@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.control-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.todo-list {
+    display: inline-flex;
+    align-items:flex-start;
+    width: 700px;
+    
+    margin: auto;
+}
