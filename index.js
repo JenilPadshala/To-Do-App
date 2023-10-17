@@ -3,6 +3,7 @@ const add_button = document.querySelector(".add-button");
 const clear_button = document.querySelector(".clear-button");
 const ordered_list = document.querySelector(".ordered-list");
 const del_dutton = document.querySelectorAll(".del-button");
+const reqLabel = document.querySelector("#required-label");
 //event listeners
 add_button.addEventListener("click",addTaskToList);
 clear_button.addEventListener("click", clearList);
@@ -11,6 +12,11 @@ clear_button.addEventListener("click", clearList);
 //functions
 function addTaskToList(){
     let input = input_task.value;
+    if (input ===""){
+        reqLabel.textContent = "Enter a task!";
+        return;
+    }
+    reqLabel.textContent = "";
     //create a new li and set text as input
     const newItem = document.createElement("li");
     newItem.classList.add("task");
